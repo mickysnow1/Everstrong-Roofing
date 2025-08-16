@@ -21,8 +21,8 @@
 body {
     font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #3C2F2F; /* Rich brown for text */
-    background: #F5F0E1; /* Cream background */
+    color: #3C2F2F; /* Rich brown */
+    background: #F5F0E1; /* Cream */
     min-height: 100vh;
 }
 
@@ -74,7 +74,7 @@ body {
     font-family: 'Lora', serif;
     font-size: 1.75rem;
     font-weight: 700;
-    color: #3C2F2F; /* Rich brown */
+    color: #3C2F2F;
 }
 
 /* Navigation */
@@ -109,7 +109,7 @@ body {
 
 .nav-menu a:hover {
     color: #A8B5A2; /* Sage green */
-    background: rgba(139, 90, 43, 0.1); /* Light wood brown */
+    background: rgba(139, 90, 43, 0.1);
     transform: translateY(-2px);
 }
 
@@ -142,7 +142,7 @@ body {
     list-style: none;
     padding: 0.5rem 0;
     margin: 0;
-    background: rgba(245, 240, 225, 0.95); /* Cream with transparency */
+    background: rgba(245, 240, 225, 0.95);
     backdrop-filter: blur(12px);
     border: 1px solid rgba(139, 90, 43, 0.2);
     border-radius: 0.5rem;
@@ -282,7 +282,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('wood-texture.jpg') center/cover no-repeat; /* Add wood texture image */
+    background: url('assets/wood-texture.jpg') center/cover no-repeat;
     padding: 5rem 1rem;
     text-align: center;
 }
@@ -347,6 +347,44 @@ body {
     background: rgba(139, 90, 43, 0.1);
 }
 
+/* Trust Indicators */
+.trust-indicators {
+    padding: 2rem 1rem;
+    background: #F5F0E1;
+    text-align: center;
+}
+
+.trust-text {
+    font-size: 1.25rem;
+    color: #3C2F2F;
+    margin-bottom: 1.5rem;
+}
+
+.partnerships {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.partner-item {
+    text-align: center;
+}
+
+.partner-logo {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    color: #3C2F2F;
+    padding: 0.5rem 1rem;
+    background: rgba(139, 90, 43, 0.1);
+    border-radius: 0.5rem;
+}
+
+.partner-type {
+    font-size: 0.9rem;
+    color: #4A3728;
+}
+
 /* Problem-Solution */
 .problem-solution {
     padding: 4rem 1rem;
@@ -405,10 +443,31 @@ body {
     color: #4A3728;
 }
 
-/* Pricing/Quote Section */
+/* Gallery Section */
+.gallery {
+    padding: 4rem 1rem;
+    background: #F5F0E1;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    height: 200px;
+}
+
+/* Quote Section */
 .pricing {
     padding: 4rem 1rem;
-    background: url('linen-texture.jpg') center/cover no-repeat; /* Add linen texture */
+    background: url('assets/linen-texture.jpg') center/cover no-repeat;
 }
 
 .contact-form-container {
@@ -459,13 +518,19 @@ body {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     padding: 0.75rem;
     border: 1px solid rgba(139, 90, 43, 0.3);
     border-radius: 0.5rem;
     font-family: 'Open Sans', sans-serif;
     color: #3C2F2F;
     background: #FFF;
+}
+
+.form-group select {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%233C2F2F" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat right 0.75rem center/12px 12px;
 }
 
 .form-group textarea {
@@ -617,6 +682,10 @@ body {
     }
 
     .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid {
         grid-template-columns: 1fr;
     }
 }
